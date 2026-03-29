@@ -44,7 +44,7 @@ A full-stack Amazon-like e-commerce web application built using modern web techn
 ---
 
 ## 🌐 Live Demo
-https://amazon-clone-prokects.vercel.app
+[https://amazon-clone-prokects.vercel.app](https://amazon-ecommerce-clone-nstu.vercel.app/)
 
 ---
 
