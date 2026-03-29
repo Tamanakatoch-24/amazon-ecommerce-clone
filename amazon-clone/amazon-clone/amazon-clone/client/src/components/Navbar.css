@@ -1,0 +1,362 @@
+.amazon-header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.header-main {
+    height: 60px;
+    background: #131921;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 155px 220px minmax(240px, 1fr) 330px;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+}
+
+.header-logo {
+    display: inline-flex;
+    align-items: flex-end;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 0.8;
+    position: relative;
+    margin-right: 8px;
+}
+
+.header-logo span {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.header-logo::after {
+    content: "";
+    position: absolute;
+    width: 104px;
+    height: 18px;
+    border: 3px solid transparent;
+    border-bottom: 3px solid #ff9900;
+    border-radius: 0 0 100px 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 33px;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.header-logo::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff9900;
+    border-radius: 50%;
+    right: -10px;
+    top: 28px;
+    pointer-events: none;
+}
+
+.header-location {
+    font-size: 13px;
+    line-height: 1.15;
+    color: #d6d6d6;
+    white-space: nowrap;
+}
+
+.header-search {
+    height: 40px;
+    display: grid;
+    grid-template-columns: 60px 1fr 52px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header-search select,
+.header-search input,
+.header-search button {
+    border: 0;
+    outline: none;
+}
+
+.header-search select {
+    padding: 0 8px;
+    font-size: 13px;
+    color: #555;
+    background: #f3f3f3;
+}
+
+.header-search input {
+    padding: 0 12px;
+    font-size: 16px;
+    background: #ffffff;
+}
+
+.header-search button {
+    background: #f3a847;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.header-action {
+    font-size: 11px;
+    line-height: 1.05;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-account-wrap {
+    position: relative;
+    z-index: 220;
+}
+
+.header-account-trigger {
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.header-account-trigger small {
+    font-size: 12px;
+}
+
+.header-account-trigger strong {
+    font-size: 14px;
+}
+
+.header-account-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 214;
+}
+
+.header-account-menu {
+    position: absolute;
+    right: -18px;
+    top: calc(100% + 14px);
+    width: 500px;
+    background: #ffffff;
+    border: 1px solid #d5d9d9;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(15, 17, 17, 0.5);
+    color: #0f1111;
+    z-index: 215;
+}
+
+.header-account-menu::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 52px;
+    width: 16px;
+    height: 16px;
+    border-top: 1px solid #d5d9d9;
+    border-left: 1px solid #d5d9d9;
+    background: #ffffff;
+    transform: rotate(45deg);
+}
+
+.header-account-top {
+    padding: 14px 16px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.header-account-signin {
+    display: block;
+    max-width: 220px;
+    margin: 0 auto;
+    min-height: 32px;
+    line-height: 32px;
+    border-radius: 999px;
+    border: 1px solid #fcd200;
+    background: #ffd814;
+    color: #0f1111;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.header-account-top p {
+    margin: 6px 0 0;
+    font-size: 12px;
+}
+
+.header-account-top p a {
+    color: #007185;
+}
+
+.header-account-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-account-col {
+    padding: 14px 16px;
+}
+
+.header-account-col:first-child {
+    border-right: 1px solid #e7e7e7;
+}
+
+.header-account-col h4 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.header-account-col a {
+    display: block;
+    margin-bottom: 6px;
+    color: #0f1111;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.header-account-col a:hover {
+    color: #cc6600;
+    text-decoration: underline;
+}
+
+.header-menu-signout {
+    margin-top: 8px;
+    min-height: 30px;
+    border-radius: 999px;
+    border: 1px solid #d5d9d9;
+    background: #f0f2f2;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.header-action small {
+    font-size: 12px;
+}
+
+.header-action strong {
+    font-size: 14px;
+}
+
+.header-lang {
+    font-size: 14px;
+    font-weight: 700;
+    flex-direction: row;
+}
+
+.header-cart {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header-cart strong {
+    color: #f3a847;
+    font-size: 18px;
+}
+
+.header-subnav {
+    height: 42px;
+    background: #232f3e;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0 14px;
+    overflow-x: auto;
+}
+
+.header-subnav span {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+@media (max-width: 1300px) {
+    .header-main {
+        grid-template-columns: 135px minmax(200px, 1fr) 260px;
+    }
+
+    .header-location {
+        display: none;
+    }
+
+    .header-action {
+        font-size: 11px;
+    }
+
+    .header-subnav span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-main {
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .header-logo {
+        font-size: 34px;
+    }
+
+    .header-action,
+    .header-cart,
+    .header-subnav span {
+        font-size: 12px;
+    }
+
+    .header-logo span,
+    .header-cart strong {
+        font-size: 14px;
+    }
+
+    .header-search input {
+        font-size: 14px;
+    }
+
+    .header-subnav {
+        height: 36px;
+        gap: 14px;
+    }
+
+    .header-account-menu {
+        right: 0;
+        width: 94vw;
+        max-width: 520px;
+    }
+
+    .header-account-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header-account-col:first-child {
+        border-right: 0;
+        border-bottom: 1px solid #e7e7e7;
+    }
+}
